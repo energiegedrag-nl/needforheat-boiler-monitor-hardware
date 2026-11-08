@@ -2,12 +2,14 @@
 
 This repository contains the open hardware design files for the NeedForHeat Boiler Monitor hardware, which consists of PCB and 3D printable pipeclamps for:
 
+> **Own deployment.** This repository is maintained by [energiegedrag-nl](https://github.com/energiegedrag-nl) and deployed under `energiegedrag.nl`. To run your own instance, replace `energiegedrag-nl` by your GitHub organisation and `energiegedrag.nl` by your domain (hosts used: `api.<domain>`, `manuals.<domain>`), consistently in configuration and build settings.
+
 * Boiler-BASE module for the on the back of an [M5Stack CoreInk](https://docs.m5stack.com/en/core/coreink) device;
 * Thermostat Cable Splitter module, which is inserted by the subject in the signal path between boiler and thermostat;
 * Two pipe clamps with temperature sensors that can be clipped on the supply and return pipes that carry hot water from the boiler to the radiators and returning from the radiators.
 
 This integrated device can:
-* monitor OpenTherm signals between boiler and thermostat, similar to the [Twomes OpenTherm monitor](https://github.com/energietransitie/twomes-opentherm-monitor-hardware);
+* monitor OpenTherm signals between boiler and thermostat, similar to the [Twomes OpenTherm monitor](https://github.com/energiegedrag-nl/twomes-opentherm-monitor-hardware);
 * monitor on/off signals between boiler and thermostat that do not adhere to the OpenTherm standard;
 * monitor with supply and return water temperatures, similar to the [Twomes Temperature Monitor Hardware](https://github.com/energietransitie/twomes-temp-monitor-hardware).
 
@@ -42,9 +44,9 @@ This repository contains the open hardware designs files and production files fo
 The splitter features a 4 wire pluggable screw terminal on each side in which the cables can be connected to in almost any order.
 
 The associated firmware that you need to run on this device was not yet implemented. I will be a combination of:
-* [needforheat-generic-firmware](https://github.com/energietransitie/needforheat-generic-firmware) compiled with `env:M5STACK_COREINK`
-* [twomes-opentherm-monitor-firmware](https://github.com/energietransitie/twomes-opentherm-monitor-firmware) 
-* [twomes-boiler-base-firmware](https://github.com/energietransitie/twomes-boiler-base-firmware).
+* [needforheat-generic-firmware](https://github.com/energiegedrag-nl/needforheat-generic-firmware) compiled with `env:M5STACK_COREINK`
+* [twomes-opentherm-monitor-firmware](https://github.com/energiegedrag-nl/twomes-opentherm-monitor-firmware) 
+* [twomes-boiler-base-firmware](https://github.com/energiegedrag-nl/needforheat-boiler-monitor-firmware).
 
 ## Producing
 
@@ -105,7 +107,7 @@ To deploy the NeedForHeat Boiler Module to a home, you need all hardware listed 
 
 ### Connecting
 
-Assuming that the PCBs are fully assembled, the devices have an enclosure, and the device has been programmed with the [needforheat-p1-reader-firmware](https://github.com/energietransitie/needforheat-p1-reader-firmware), you can proceed and connect the device as follows:
+Assuming that the PCBs are fully assembled, the devices have an enclosure, and the device has been programmed with the [needforheat-p1-reader-firmware](https://github.com/energiegedrag-nl/needforheat-p1-reader-firmware), you can proceed and connect the device as follows:
 
 Tools needed;
 - Screwdriver (flat head, 3 mm)
@@ -216,6 +218,6 @@ Product owners:
 
 We use and gratefully acknowlegde the efforts of the makers of the following designs:
 
-* [Twomes OpenTherm monitor](https://github.com/energietransitie/twomes-opentherm-monitor-hardware), by Research group Energy Transition at Windesheim University of Applied Sciences, licenced under [Apache 2.0](https://raw.githubusercontent.com/energietransitie/twomes-opentherm-monitor-hardware/main/LICENSE)
+* [Twomes OpenTherm monitor](https://github.com/energiegedrag-nl/twomes-opentherm-monitor-hardware), by Research group Energy Transition at Windesheim University of Applied Sciences, licenced under [Apache 2.0](https://raw.githubusercontent.com/energietransitie/twomes-opentherm-monitor-hardware/main/LICENSE)
 * [Twomes Temperature Monitor Hardware](https://github.com/energietransitie/twomes-temp-monitor-hardware), by Research group Energy Transition at Windesheim University of Applied Sciences, licenced under [Apache 2.0](https://raw.githubusercontent.com/energietransitie/twomes-temp-monitor-hardware/main/LICENSE)
 * [KiCad Libraries](https://kicad.github.io/), by the KiCad Development Team, licensed under [an adapted version of the CC-BY-SA 4.0 License](https://www.kicad.org/libraries/license/)
